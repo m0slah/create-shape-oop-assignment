@@ -8,11 +8,12 @@ public class Main extends JFrame {
 
     private void initUI() {
         add(new FirstShape());
+//        add(new SecondShape()); // uncomment this line two see the second Shape
 
         setTitle("Shape Drawing");
         setSize(400, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null); // Center the window
+        setLocationRelativeTo(null);
     }
 
     public static void main(String[] args) {
