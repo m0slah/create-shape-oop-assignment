@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class Main extends JFrame {
 
@@ -7,11 +8,16 @@ public class Main extends JFrame {
     }
 
     private void initUI() {
-        add(new FirstShape());
-//        add(new SecondShape()); // uncomment this line two see the second Shape
+        JPanel container = new JPanel();
+        container.setLayout(new GridLayout(2, 1));
+
+        container.add(new FirstShape());
+        container.add(new SecondShape());
+
+        add(container);
 
         setTitle("Shape Drawing");
-        setSize(400, 400);
+        setSize(400, 800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
     }
